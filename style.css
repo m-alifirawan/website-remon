@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", Arial, sans-serif;
+}
+
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: auto;
+  justify-content: space-between;
+  text-align: center;
+  box-shadow: 0 5px 10px 20px rgba(38, 45, 47, 0.75);
+}
+
+.nav-container .nav-logo {
+  display: flex;
+  font-size: 1.5rem;
+  margin-left: 30px;
+  padding: 15px;
+}
+
+.nav-logo a {
+  text-decoration: none;
+}
+
+.nav-container .nav-logo h4 {
+  font-weight: 900;
+  color: rgb(231, 140, 13);
+}
+
+.nav-container .nav-link ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin-right: 30px;
+  padding: 10px 0;
+}
+
+.nav-link ul li {
+  padding: 10px;
+}
+
+.nav-link li a {
+  color: rgb(231, 140, 13);
+  text-decoration: none;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.nav-link li a:hover {
+  color: #ffff;
+}
+
+/* header */
+
+.head-container {
+  background-position: center;
+  background-image: url(img/hero.jpg);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 50vh;
+  margin: auto;
+}
+
+.hero {
+  padding: 50px;
+}
