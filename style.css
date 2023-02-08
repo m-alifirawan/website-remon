@@ -13,19 +13,25 @@ body {
 /* navbar */
 
 .nav-container {
+  overflow: hidden;
   display: flex;
   flex-direction: row;
   width: 100%;
   margin: auto;
+  top: 0;
   justify-content: space-between;
   text-align: center;
-  box-shadow: 0 5px 10px 20px rgba(38, 45, 47, 0.75);
+  background-color: rgb(53, 50, 50, 0.7);
+  box-shadow: 0 1px 5px 0.3px rgba(38, 45, 47, 0.75);
+  position: fixed;
+  z-index: 100;
+  padding: 3px 0 0 0;
 }
 
 .nav-container .nav-logo {
   display: flex;
   margin-left: 30px;
-  padding: 35px;
+  padding: 20px;
 }
 
 .nav-logo a {
@@ -43,7 +49,7 @@ body {
   flex-direction: row;
   list-style: none;
   margin-right: 50px;
-  padding: 35px 0;
+  padding: 20px 0;
 }
 
 .nav-link ul li {
@@ -60,7 +66,11 @@ body {
 }
 
 .nav-link li a:hover {
-  color: rgb(19, 17, 17);
+  color: white;
+}
+
+.nav-link a:active {
+  color: white;
 }
 
 /* header */
@@ -91,7 +101,7 @@ body {
 }
 
 .hero .hero-tag {
-  font-size: 50px;
+  font-size: 60px;
   font-weight: 900;
 }
 
@@ -178,7 +188,8 @@ body {
 }
 
 .pp-text h1 {
-  font-size: 50px;
+  font-size: 60px;
+  font-weight: 900;
   text-transform: uppercase;
   margin-bottom: 10px;
   padding-top: 20px;
@@ -237,7 +248,8 @@ body {
   justify-content: center;
   text-align: center;
   margin-top: 20px;
-  margin-bottom: -10px;
+  margin-bottom: -40px;
+  padding-bottom: 10px;
 }
 
 .pp-link a {
@@ -258,16 +270,14 @@ body {
 
 /* services */
 
-.ser-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
+.ser-main {
   width: 100%;
+  height: auto;
   background-color: rgb(53, 50, 50);
-  padding: 100px 0;
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 100px;
 }
-
 .ser-text {
   font-size: 50px;
   font-weight: 900;
@@ -276,17 +286,143 @@ body {
   margin-bottom: 30px;
 }
 
-.ser-main {
-  position: relative;
-  display: flex;
-  flex-direction: row;
+.ser-container {
   width: 100%;
-  height: 50%;
-  margin: 30px 0;
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "br ct vn ds"
+    "br ct vn ds";
+  gap: 0;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  position: relative;
 }
 
-.ser-main img {
-  position: center;
-  width: 374.5px;
-  height: 700px;
+.broadcast {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-area: br;
+  position: relative;
+  background-image: url(img/services/broadcast.jpg);
 }
+.content {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-area: ct;
+  position: relative;
+  background-image: url(img/services/content.jpg);
+}
+.venue {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-area: vn;
+  position: relative;
+  background-image: url(img/services/venue.jpg);
+}
+.design {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-area: ds;
+  position: relative;
+  background-image: url(img/services/design.jpg);
+}
+
+.ser-container h3 {
+  margin-top: 35px;
+  margin-bottom: 35px;
+  font-size: 35px;
+  font-weight: 900;
+}
+
+.ser-container p {
+  width: 100%;
+  height: 50vh;
+  padding: 100px 0 25px 0;
+  opacity: 1;
+  margin-bottom: 50px;
+}
+
+.ser-head {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 0 15px;
+  text-align: center;
+  justify-content: center;
+}
+
+.ser-container a {
+  text-decoration: none;
+  color: rgb(236, 172, 82);
+  border: 1px solid rgb(236, 172, 82);
+  padding: 15px 30px;
+}
+
+.ser-container a:hover {
+  text-decoration: none;
+  color: white;
+  background-color: rgb(236, 172, 82);
+  border: 1px solid rgb(236, 172, 82);
+  padding: 15px 30px;
+}
+
+/* footer */
+
+.foot-container {
+  width: 100%;
+  height: auto;
+  background-color: rgb(53, 50, 50);
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+  color: rgb(231, 140, 13);
+}
+
+.foot-logo {
+  margin-left: 50px;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.foot-logo a {
+  text-decoration: none;
+  color: rgb(231, 140, 13);
+}
+.icon-container {
+  padding-top: 5px;
+}
+
+.foot-icon {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin-right: 50px;
+}
+
+.foot-icon a {
+  color: rgb(231, 140, 13);
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+/* responsive */
+
+/* @media screen {
+  min-width: 576px;
+}
+
+@media screen {
+  min-width: 768px;
+} */
